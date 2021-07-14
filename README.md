@@ -1,2 +1,2 @@
-# mpl-zh-fonts
-Chinese fonts manager for matplotlib
+# mpl-fonts
+Fonts manager for matplotlib
