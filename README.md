@@ -1,2 +1,2 @@
-# mpl-fonts
+# mplfonts
 Fonts manager for matplotlib
