@@ -138,7 +138,7 @@ def list_font() -> list:
     """
     result = []
     for font in matplotlib.font_manager.fontManager.ttflist:
-        print(f'{font.name:30} {font.fname}')
+        print(f'{font.name}:\n{font.fname}\n---------------')
 
     return result
 
