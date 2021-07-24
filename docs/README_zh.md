@@ -2,7 +2,6 @@
 
 [![Build Status](https://api.travis-ci.com/Clarmy/mplfonts.svg?branch=main)](https://travis-ci.com/github/Clarmy/mplfonts)
 [![PyPI version](https://badge.fury.io/py/mplfonts.svg)](https://badge.fury.io/py/mplfonts)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Clarmy/mplfonts/issues)
 
 # mplfonts
