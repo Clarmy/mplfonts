@@ -45,6 +45,30 @@ Also, you can install all fonts in a directory(folder) by:
 $ mplfonts install --update <your directory path>
 ```
 
+Don't know what fonts is available? Don't worry, you can use `mplfonts list` to list all available fonts.
+```bash
+$ mplfonts list
+DejaVu Sans Display:
+/Users/clarmylee/Miniconda3/envs/mplfonts/lib/python3.6/site-packages/matplotlib-3.3.4-py3.6-macosx-10.9-x86_64.egg/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf
+---------------
+DejaVu Sans:
+/Users/clarmylee/Miniconda3/envs/mplfonts/lib/python3.6/site-packages/matplotlib-3.3.4-py3.6-macosx-10.9-x86_64.egg/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf
+---------------
+Source Han Mono SC:
+/Users/clarmylee/Miniconda3/envs/mplfonts/lib/python3.6/site-packages/matplotlib-3.3.4-py3.6-macosx-10.9-x86_64.egg/matplotlib/mpl-data/fonts/ttf/SourceHanMonoSC-Regular.otf
+
+...
+```
+It will show fonts' name and source file, and these names can be argument to pass to  `use_font` function
+
+By default, `mplfonts quickstart` will generate a `matplotlibrc` as the cache configuration, supporting CJK render, to replace your old one, the content of `matplotlibrc` is:
+```
+font.family:  sans-serif
+font.sans-serif: Noto Sans CJK SC Regular, 思源等宽, Noto Serif CJK SC, 思源宋体, Noto Sans Mono CJK SC Regularsans-serif
+axes.unicode_minus: False
+```
+It will preferentially use `Noto Sans CJK SC Regular` as the default font. If you install custom fonts from other source, and want it to be the first priority, you should add it to the leftmost end of `font.sans-serif` list, and then run `$ mplfonts updaterc <your matploblibrc path>` to set it as your global cache rc.
+
 ## Fonts Source
 You can access some open-source fonts from google and adobe, here is some resource:
 * https://github.com/adobe-fonts
