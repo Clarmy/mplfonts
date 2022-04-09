@@ -46,4 +46,5 @@ jobs:
         # Activate the base environment
         C:\Miniconda\condabin\conda.bat activate base
         # C:\Miniconda\condabin\conda.bat install pytest
+        mplfonts init
         pytest -p no:warnings --verbose
