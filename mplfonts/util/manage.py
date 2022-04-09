@@ -1,4 +1,5 @@
 import os
+import sys
 import shutil
 from glob import glob
 
@@ -10,7 +11,7 @@ from matplotlib.pyplot import rc
 from mplfonts.conf import FONT_DIR, RC_DIR
 
 MPL_FONT_PATH = os.path.join(matplotlib.get_data_path(), 'fonts/ttf')
-
+ENCODING = sys.getdefaultencoding()
 
 def use_font(font='Noto Sans CJK SC'):
     """To choose the font that you want to use
@@ -93,7 +94,7 @@ def update_rc_font_list(font_names, rcfp=None):
 
     content[n] = font_list_text
 
-    with open(rcfp, 'w', encoding='utf-8') as f:
+    with open(rcfp, 'w', encoding=ENCODING) as f:
         f.write(''.join(content))
 
 
