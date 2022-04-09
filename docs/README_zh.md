@@ -1,6 +1,6 @@
 [English Documentation](./README_en.md)
 
-[![Build Status](https://api.travis-ci.com/Clarmy/mplfonts.svg?branch=main)](https://travis-ci.com/github/Clarmy/mplfonts)
+[![Python package](https://github.com/Clarmy/mplfonts/actions/workflows/python-package.yml/badge.svg)](https://github.com/Clarmy/mplfonts/actions/workflows/python-package.yml)
 [![PyPI version](https://badge.fury.io/py/mplfonts.svg)](https://badge.fury.io/py/mplfonts)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Clarmy/mplfonts/issues)
 
@@ -18,7 +18,7 @@ $ pip install mplfonts
 ## 快速设置
 安装完成之后，你只需要执行一条简单的命令就可以快速解决亚洲字体渲染出现“豆腐块”的问题：
 ```bash
-$ mplfonts quickstart
+$ mplfonts init
 ```
 执行完之后，试试在matplotlib的程序中渲染亚洲字体，结果应该会正常显示了。
 
@@ -31,7 +31,7 @@ $ mplfonts quickstart
 * Noto Sans CJK SC：Noto黑体
 * Source Han Serif SC：思源宋体
 * Source Han Mono SC：思源等宽宋体
-当你完成了上述的`mplfonts quickstart`命令以后，你就可以在程序中指定你想要的使用的字体
+当你完成了上述的`mplfonts init`命令以后，你就可以在程序中指定你想要的使用的字体
 ```python
 from mplfonts import use_font
 
@@ -65,7 +65,7 @@ Source Han Mono SC:
 ```
 它显示的是当前可用的字体的名称及字体源文件，这些字体名称是可以直接作为参数传入`use_font`使用的。
 
-默认情况下，`mplfonts quickstart`会为你生成一个默认的支持亚洲字体的`matplotlibrc`文件来替代你的默认缓存配置，这个`matplotlibrc`文件的默认内容如下：
+默认情况下，`mplfonts init`会为你生成一个默认的支持亚洲字体的`matplotlibrc`文件来替代你的默认缓存配置，这个`matplotlibrc`文件的默认内容如下：
 ```
 font.family:  sans-serif
 font.sans-serif: Noto Sans CJK SC Regular, 思源等宽, Noto Serif CJK SC, 思源宋体, Noto Sans Mono CJK SC Regularsans-serif
