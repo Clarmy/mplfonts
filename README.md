@@ -1,8 +1,9 @@
 [中文文档](./docs/README_zh.md)
 
-[![Build Status](https://api.travis-ci.com/Clarmy/mplfonts.svg?branch=main)](https://travis-ci.com/github/Clarmy/mplfonts)
+[![Python package](https://github.com/Clarmy/mplfonts/actions/workflows/python-package.yml/badge.svg)](https://github.com/Clarmy/mplfonts/actions/workflows/python-package.yml)
 [![PyPI version](https://badge.fury.io/py/mplfonts.svg)](https://badge.fury.io/py/mplfonts)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Clarmy/mplfonts/issues)
+
 
 # mplfonts
 Fonts manager for matplotlib
