@@ -105,7 +105,7 @@ def install_fonts(font_dir=None):
     """
     if not font_dir:
         font_dir = FONT_DIR
-    font_fps = glob(os.path.join(font_dir, '*.otf'))
+    font_fps = glob(os.path.join(font_dir, '*.[ot]tf'))
     font_names = []
     for src_font_fp in font_fps:
         mpl_font_fp = os.path.join(
