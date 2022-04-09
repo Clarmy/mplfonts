@@ -1,4 +1,5 @@
 import os
+import locale
 import shutil
 from glob import glob
 
@@ -9,8 +10,8 @@ from matplotlib.pyplot import rc
 
 from mplfonts.conf import FONT_DIR, RC_DIR
 
-
 MPL_FONT_PATH = os.path.join(matplotlib.get_data_path(), 'fonts/ttf')
+ENCODING = locale.getpreferredencoding()
 
 
 def use_font(font='Noto Sans CJK SC'):
@@ -83,17 +84,18 @@ def update_rc_font_list(font_names, rcfp=None):
     if not rcfp:
         rcfp = os.path.join(RC_DIR, 'matplotlibrc')
 
-    with open(rcfp) as f:
+    with open(rcfp, encoding='utf-8', errors='ignore') as f:
         content = f.readlines()
 
-    font_list_text = 'font.sans-serif: ' + ', '.join(font_names) + 'sans-serif\n'
+    font_list_text = 'font.sans-serif: ' + \
+        ', '.join(font_names) + 'sans-serif\n'
     for n, line in enumerate(content):
         if line.startswith('font.sans-serif'):
             break
 
     content[n] = font_list_text
 
-    with open(rcfp, 'w') as f:
+    with open(rcfp, 'w', encoding=ENCODING) as f:
         f.write(''.join(content))
 
 
@@ -105,7 +107,7 @@ def install_fonts(font_dir=None):
     """
     if not font_dir:
         font_dir = FONT_DIR
-    font_fps = glob(os.path.join(font_dir, '*.otf'))
+    font_fps = glob(os.path.join(font_dir, '*.[ot]tf'))
     font_names = []
     for src_font_fp in font_fps:
         mpl_font_fp = os.path.join(

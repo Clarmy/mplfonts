@@ -6,14 +6,15 @@ from mplfonts.util.manage import (
 from mplfonts.conf import FONT_DIR
 
 
-def quickstart():
+def init():
     """To set default cjk fonts and put into use"""
     install_fonts()
     update_custom_rc()
 
 
-def install(path=None, update=False):
-    """To install font
+def install(path=None, update=True):
+    """
+    To install font
 
     Args:
         path (str): The font file path or directory path
@@ -30,7 +31,8 @@ def install(path=None, update=False):
 
 
 def updaterc(rcfp=None):
-    """To update matplotlibrc by custom file
+    """
+    To update matplotlibrc by custom file
 
     Args:
         rcfp (str): The custom matplotlibrc
@@ -40,7 +42,7 @@ def updaterc(rcfp=None):
 
 def cli():
     fire.Fire({
-        'quickstart': quickstart,
+        'init': init,
         'install': install,
         'updaterc': updaterc,
         'list': list_font})

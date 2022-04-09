@@ -1,8 +1,9 @@
 [中文文档](./docs/README_zh.md)
 
-[![Build Status](https://api.travis-ci.com/Clarmy/mplfonts.svg?branch=main)](https://travis-ci.com/github/Clarmy/mplfonts)
+[![Python package](https://github.com/Clarmy/mplfonts/actions/workflows/python-package.yml/badge.svg)](https://github.com/Clarmy/mplfonts/actions/workflows/python-package.yml)
 [![PyPI version](https://badge.fury.io/py/mplfonts.svg)](https://badge.fury.io/py/mplfonts)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Clarmy/mplfonts/issues)
+
 
 # mplfonts
 Fonts manager for matplotlib
@@ -18,7 +19,7 @@ $ pip install mplfonts
 ## Quickstart
 You can just run one command to solve the "tofu" problem:
 ```bash
-$ mplfonts quickstart
+$ mplfonts init
 ```
 After that, try to use matplotlib to plot an image with CJK text, it should be normal.
 
@@ -31,7 +32,7 @@ This package's aim is not only to solve "tofu" problem, but also to manage matpl
 * Noto Sans CJK SC
 * Source Han Serif SC
 * Source Han Mono SC
-If you have finished the `quickstart`, You can shift fonts in you script like:
+If you have finished the `init`, You can shift fonts in you script like:
 ```python
 from mplfonts import use_font
 
@@ -65,7 +66,7 @@ Source Han Mono SC:
 ```
 It will show fonts' name and source file, and these names can be argument to pass to  `use_font` function
 
-By default, `mplfonts quickstart` will generate a `matplotlibrc` as the cache configuration, supporting CJK render, to replace your old one, the content of `matplotlibrc` is:
+By default, `mplfonts init` will generate a `matplotlibrc` as the cache configuration, supporting CJK render, to replace your old one, the content of `matplotlibrc` is:
 ```
 font.family:  sans-serif
 font.sans-serif: Noto Sans CJK SC Regular, 思源等宽, Noto Serif CJK SC, 思源宋体, Noto Sans Mono CJK SC Regularsans-serif
