@@ -12,7 +12,7 @@ with open(requirements_path, encoding='utf-8') as f:
 
 setuptools.setup(
     name='mplfonts',
-    version='0.0.4',
+    version='0.0.5',
     author='Wentao Li',
     author_email='clarmylee92510@gmail.com',
     description='Fonts manager for matplotlib',
