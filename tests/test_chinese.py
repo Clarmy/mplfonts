@@ -28,5 +28,6 @@ def test_chinese(debug=False):
 
         plt.savefig(fp, format='png')
 
+
 if __name__ == '__main__':
     test_chinese(debug=True)

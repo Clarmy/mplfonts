@@ -13,6 +13,7 @@ from mplfonts.conf import FONT_DIR, RC_DIR
 MPL_FONT_PATH = os.path.join(matplotlib.get_data_path(), 'fonts/ttf')
 ENCODING = locale.getpreferredencoding()
 
+
 def use_font(font='Noto Sans CJK SC'):
     """To choose the font that you want to use
 
@@ -83,7 +84,7 @@ def update_rc_font_list(font_names, rcfp=None):
     if not rcfp:
         rcfp = os.path.join(RC_DIR, 'matplotlibrc')
 
-    with open(rcfp, encoding='utf-8') as f:
+    with open(rcfp, encoding='utf-8', errors='ignore') as f:
         content = f.readlines()
 
     font_list_text = 'font.sans-serif: ' + \
