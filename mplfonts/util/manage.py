@@ -9,7 +9,6 @@ from matplotlib.pyplot import rc
 
 from mplfonts.conf import FONT_DIR, RC_DIR
 
-
 MPL_FONT_PATH = os.path.join(matplotlib.get_data_path(), 'fonts/ttf')
 
 
@@ -83,17 +82,18 @@ def update_rc_font_list(font_names, rcfp=None):
     if not rcfp:
         rcfp = os.path.join(RC_DIR, 'matplotlibrc')
 
-    with open(rcfp) as f:
+    with open(rcfp, encoding='utf-8') as f:
         content = f.readlines()
 
-    font_list_text = 'font.sans-serif: ' + ', '.join(font_names) + 'sans-serif\n'
+    font_list_text = 'font.sans-serif: ' + \
+        ', '.join(font_names) + 'sans-serif\n'
     for n, line in enumerate(content):
         if line.startswith('font.sans-serif'):
             break
 
     content[n] = font_list_text
 
-    with open(rcfp, 'w') as f:
+    with open(rcfp, 'w', encoding='utf-8') as f:
         f.write(''.join(content))
 
 
