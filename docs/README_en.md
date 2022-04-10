@@ -32,6 +32,7 @@ This package's aim is not only to solve "tofu" problem, but also to manage matpl
 * Noto Sans CJK SC
 * Source Han Serif SC
 * Source Han Mono SC
+
 If you have finished the `init`, You can shift fonts in you script like:
 ```python
 from mplfonts import use_font
