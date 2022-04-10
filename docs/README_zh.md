@@ -31,6 +31,7 @@ $ mplfonts init
 * Noto Sans CJK SC：Noto黑体
 * Source Han Serif SC：思源宋体
 * Source Han Mono SC：思源等宽宋体
+
 当你完成了上述的`mplfonts init`命令以后，你就可以在程序中指定你想要的使用的字体
 ```python
 from mplfonts import use_font
