@@ -17,7 +17,6 @@ FONT_NAMES = {
     'SimHei': '微软雅黑'
 }
 
-
 def test_chinese(debug=False):
     for font_name, desc in FONT_NAMES.items():
         fp = font_name.replace(' ', '_') + '.png'
