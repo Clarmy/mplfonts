@@ -3,4 +3,4 @@ toml==0.10.2
 pytest==6.2.4
 fontmeta==1.6.1
 numpy
-matplotlib
+matplotlib==3.3
