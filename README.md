@@ -6,34 +6,33 @@
 
 
 # mplfonts
-Fonts manager for matplotlib
-
-This is a python package and command line tool to manage your matplotlib fonts. You can easily resolve the "tofu" problem when plotting with CJK(Chinese, Japanese, Korean) languages.
+The Matplotlib font manager is a Python package and command-line tool that allows you to manage your Matplotlib fonts. It provides an easy solution to the "tofu" problem that arises when plotting with CJK (Chinese, Japanese, Korean) languages.
 
 ## Installation
-You can install mplfonts with `pip`
+You can use `pip` to install mplfonts.
 ```bash
 $ pip install mplfonts
 ```
 
 ## Quickstart
-You can just run one command to solve the "tofu" problem:
+You can easily solve the "tofu" problem with a single command:
 ```bash
 $ mplfonts init
 ```
-After that, try to use matplotlib to plot an image with CJK text, it should be normal.
+After that, try using Matplotlib to plot an image with CJK text; it should display normally. 
 
 Now you can enjoy it.
 
 ## Usage
-This package's aim is not only to solve "tofu" problem, but also to manage matplotlib fonts. When you installed mplfonts, there are some open-source CJK fonts already included, they are:
+This package not only solves the "tofu" problem, but also provides a convenient way to manage Matplotlib fonts. When you install mplfonts, it comes with several open-source CJK fonts, including:
 * Noto Sans Mono CJK SC
 * Noto Serif CJK SC
 * Noto Sans CJK SC
 * Source Han Serif SC
 * Source Han Mono SC
 
-If you have finished the `init`, You can shift fonts in you script like:
+Once you have finished the initialization step, you can use the following code in your script to switch fonts:
+
 ```python
 from mplfonts import use_font
 
@@ -42,16 +41,16 @@ use_font('Noto Serif CJK SC')
 # write your plotting code below
 ```
 
-If you want to setup some custom fonts, you can install by command:
+If you want to set up custom fonts, you can install them with the following command:
 ```bash
 $ mplfonts install --update <your font file path>
 ```
-Also, you can install all fonts in a directory(folder) by:
+Furthermore, you can install all the fonts in a directory by running the following command:
 ```bash
 $ mplfonts install --update <your directory path>
 ```
 
-Don't know what fonts is available? Don't worry, you can use `mplfonts list` to list all available fonts.
+Unsure of which fonts are available? No problem, simply use the command `mplfonts list` to see a list of all available fonts.
 ```bash
 $ mplfonts list
 DejaVu Sans Display:
@@ -65,18 +64,18 @@ Source Han Mono SC:
 
 ...
 ```
-It will show fonts' name and source file, and these names can be argument to pass to  `use_font` function
+This command will show the names and source files of the fonts, which can then be passed as arguments to the `use_font` function.
 
-By default, `mplfonts init` will generate a `matplotlibrc` as the cache configuration, supporting CJK render, to replace your old one, the content of `matplotlibrc` is:
+By default, running `mplfonts init` will generate a new `matplotlibrc` file to replace your current one. This new file will contain cache configuration settings that support CJK rendering. Here is the content of the new `matplotlibrc` file:
 ```
 font.family:  sans-serif
 font.sans-serif: Noto Sans CJK SC Regular, 思源等宽, Noto Serif CJK SC, 思源宋体, Noto Sans Mono CJK SC Regularsans-serif
 axes.unicode_minus: False
 ```
-It will preferentially use `Noto Sans CJK SC Regular` as the default font. If you install custom fonts from other source, and want it to be the first priority, you should add it to the leftmost end of `font.sans-serif` list, and then run `$ mplfonts updaterc <your matploblibrc path>` to set it as your global cache rc.
+By default, `Noto Sans CJK SC Regular` is the preferred font. If you install custom fonts from another source and want them to have first priority, add them to the leftmost end of the `font.sans-serif` list. Then, run `$ mplfonts updaterc <your matplotlibrc path>` to set it as your global cache configuration.
 
 ## Fonts Source
-You can access some open-source fonts from google and adobe, here is some resource:
+You can access some open-source fonts from Google and Adobe. Here are some resources:
 * https://github.com/adobe-fonts
 * https://fonts.google.com
 * https://github.com/googlefonts
