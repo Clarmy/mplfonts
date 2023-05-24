@@ -1,1 +1,1 @@
-from .util.manage import (use_font, list_font)
+from .util.manage import use_font, list_font  # noqa
