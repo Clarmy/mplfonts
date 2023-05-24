@@ -4,6 +4,7 @@ import shutil
 from glob import glob
 
 import matplotlib
+import matplotlib.font_manager
 from fontmeta import FontMeta
 
 from mplfonts.conf import FONT_DIR, RC_DIR
