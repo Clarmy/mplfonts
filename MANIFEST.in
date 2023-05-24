@@ -1,0 +1,10 @@
+include *.in
+include *.ini
+include *.rst
+include *.txt
+include LICENSE
+recursive-include requirements *.txt
+
+global-exclude __pycache__ *.py[cod] *.ipynb
+global-exclude *.so *.dylib
+global-exclude docs .github tests
