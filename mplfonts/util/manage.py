@@ -1,5 +1,4 @@
 import os
-import locale
 import shutil
 from glob import glob
 
@@ -10,7 +9,6 @@ from fontmeta import FontMeta
 from mplfonts.conf import FONT_DIR, RC_DIR
 
 MPL_FONT_PATH = os.path.join(matplotlib.get_data_path(), "fonts/ttf")
-# ENCODING = locale.getpreferredencoding()
 
 
 def use_font(font="Noto Sans CJK SC"):
