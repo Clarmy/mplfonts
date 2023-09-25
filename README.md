@@ -6,7 +6,7 @@
 
 
 # mplfonts
-The Matplotlib font manager is a Python package and command-line tool that allows you to manage your Matplotlib fonts. It provides an easy solution to the "tofu" problem that arises when plotting with CJK (Chinese, Japanese, Korean) languages.
+The mplfonts is a Python package and command-line tool that allows you to manage your Matplotlib fonts. It provides an easy solution to the "tofu" problem that arises when plotting with CJK (Chinese, Japanese, Korean) languages.
 
 ## Installation
 You can use `pip` to install mplfonts.
