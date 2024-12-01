@@ -12,7 +12,7 @@ with open(requirements_path, encoding="utf-8") as f:
 
 setuptools.setup(
     name="mplfonts",
-    version="0.0.8",
+    version="0.0.9",
     author="Wentao Li",
     author_email="clarmylee92510@gmail.com",
     description="Fonts manager for matplotlib",
@@ -26,6 +26,6 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.8,<3.12",
     entry_points={"console_scripts": ["mplfonts = mplfonts.bin.cli:cli"]},
 )
