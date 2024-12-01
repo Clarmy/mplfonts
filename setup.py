@@ -31,7 +31,7 @@ setuptools.setup(
     name="mplfonts",
     version=get_version("mplfonts/__init__.py"),
     author="Wentao Li",
-    author_email="clarmylee92510@gmail.com",
+    author_email="clarmyleewt@outlook.com",
     description="Fonts manager for matplotlib",
     long_description=long_description,
     long_description_content_type="text/markdown",
