@@ -1,4 +1,12 @@
-import setuptools
+import subprocess
+import sys
+
+try:
+    import setuptools
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "setuptools"])
+    import setuptools
+
 import os
 import codecs
 
