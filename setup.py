@@ -51,6 +51,6 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     entry_points={"console_scripts": ["mplfonts = mplfonts.bin.cli:cli"]},
 )

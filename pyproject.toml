@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "mplfonts"
-version = "0.0.9"  # Update this to match the version in mplfonts/__init__.py
+version = "0.0.9"                                 # Update this to match the version in mplfonts/__init__.py
 description = "Fonts manager for matplotlib"
 authors = ["Wentao Li <clarmyleewt@outlook.com>"]
 license = "MIT"
@@ -11,16 +11,17 @@ repository = "https://github.com/Clarmy/mplfonts"
 keywords = ["matplotlib", "fonts", "manager"]
 
 [tool.poetry.dependencies]
-python = ">=3.8"
+python = ">=3.9"
 fire = ">=0.4.0"
 fontmeta = ">=1.6.1"
 matplotlib = ">=3.4"
+numpy = ">=1.26.0"
 
 [tool.poetry.dev-dependencies]
 # Add any development dependencies here
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.0.0", "setuptools>=67.6.0", "wheel"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
