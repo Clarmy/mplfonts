@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "mplfonts"
-version = "0.0.9"                                 # Update this to match the version in mplfonts/__init__.py
+version = "0.0.10"
 description = "Fonts manager for matplotlib"
 authors = ["Wentao Li <clarmyleewt@outlook.com>"]
 license = "MIT"
