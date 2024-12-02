@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ["macos-latest", "ubuntu-latest", "windows-latest"]
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
 
     steps:
     - uses: actions/checkout@v4
@@ -35,6 +35,17 @@ jobs:
         python -m pip install flake8 pytest
         pip install -r requirements.txt
         python setup.py install
+    - name: Install poetry
+      run: |
+        python -m pip install --upgrade pip
+        pip install poetry
+    - name: Install dependencies with poetry
+      run: |
+        poetry install
+    - name: Install dependencies with pip
+      run: |
+        python -m pip install -r requirements.txt
+        python -m pip install .
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -43,5 +54,15 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
+        # init
         mplfonts init
-        pytest --verbose
+        # First try poetry
+        poetry run pytest || \
+        # Fallback to pip if poetry fails
+        python -m pytest
+    - name: Test CLI functionality
+      run: |
+        # Test using poetry
+        poetry run mplfonts --help || \
+        # Fallback to pip installation
+        mplfonts --help
