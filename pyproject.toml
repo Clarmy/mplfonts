@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "mplfonts"
-version = "0.0.10"
+version = "0.0.11"
 description = "Fonts manager for matplotlib"
 authors = ["Wentao Li <clarmyleewt@outlook.com>"]
 license = "MIT"
